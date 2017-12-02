@@ -21,3 +21,9 @@ $version: '1.0.0' !default;
 // 02 Molecules
 @import "../_patterns/02-molecules/card/card";
 @import "../_patterns/02-molecules/menu/menu";
+
+// 03 Organisms
+@import "../_patterns/03-organisms/section-home/section-home";
+
+// 04 Templates
+@import "../_patterns/04-templates/view/view";

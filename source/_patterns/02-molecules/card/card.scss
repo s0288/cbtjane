@@ -1,13 +1,15 @@
 .card {
-  box-shadow: 6px 6px 4px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
+  box-shadow: 3px 3px 2px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
   position: relative;
+  background-color: rgba(255, 255, 255, 0.95);
+  padding-top: $space-xs;
+  margin-bottom: 1.5 * $space-sm;
 }
 
 .card__header {
-  margin-top: 10px;
   color: white;
-  padding: $space-xs $space-md;
+  padding: 0.5 * $space-xs $space-sm;
   background-color: grey;
   font-weight: bold;
   display: flex;
@@ -17,21 +19,22 @@
 
 .card__title {
   background-size: contain;
-  padding-left: 33px;
+  padding-left: 32px;
+  font-size: 12px;
   background-repeat: no-repeat;
 }
 
 .card__description {
-  padding: $space-md;
-  font-size: 36px;
-  line-height: 44px;
+  padding: $space-sm $space-sm $space-md $space-sm;
+  font-size: 18px;
+  line-height: 26px;
 }
 
 .card__number {
   position: absolute;
   bottom: 0;
   right: 0;
-  font-size: 144px;
+  font-size: 72px;
   line-height: 1em;
   color: grey;
   opacity: 0.1;

@@ -1,0 +1,20 @@
+.section-home {
+  position: relative;
+
+  .card {
+    position: relative;
+    z-index: 10;
+  }
+}
+
+.section-home__avatar {
+  position: absolute;
+  left: 1.6%;
+  bottom: 12vw;
+}
+
+.section-home__progress-path {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}

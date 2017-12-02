@@ -1,0 +1,29 @@
+.view {
+  position: relative;
+  padding: $space-md;
+  background: #f9cc27; /* Old browsers */
+  background: -moz-linear-gradient(top, #f9cc27 0%, #ee7a20 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #f9cc27 0%, #ee7a20 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #f9cc27 0%, #ee7a20 100%);
+  filter: progid:dximagetransform.microsoft.gradient(startColorstr='#f9cc27', endColorstr='#ee7a20', GradientType=0);
+  height: 100%;
+  width: 100%;
+
+  h1 {
+    color: white;
+    font-weight: normal;
+    font-size: 24px;
+    margin-bottom: $space-sm;
+  }
+
+  .section-home {
+    height: calc(100% - 64px);
+  }
+
+  .menu {
+    position: absolute;
+    bottom: $space-md;
+    left: $space-md;
+    width: calc(100% - 64px);
+  }
+}

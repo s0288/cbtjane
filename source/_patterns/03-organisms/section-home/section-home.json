@@ -1,0 +1,20 @@
+{
+    "cards": [
+        {
+            "title": "#1 Brief",
+            "description": "Wie ich dir helfen kann deine Motivation festzuhalten",
+            "number": "1",
+            "type": "letter"
+        },
+        {
+            "title": "#2 Foundation",
+            "description": "Wie ich dir helfen kann deine Motivation festzuhalten",
+            "number": "2",
+            "type": "foundation"
+        }
+    ],
+    "profile": {
+        "name": "Alex",
+        "image": "/images/avatar.png"
+    }
+}
