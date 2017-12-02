@@ -9,6 +9,7 @@ $version: '1.0.0' !default;
 @import "normalize";
 @import "generic/bootstrap";
 @import "generic/general";
+@import "pattern-scaffolding.css";
 
 /* ------------------------------------ *\
     $Components
@@ -18,4 +19,5 @@ $version: '1.0.0' !default;
 @import "../_patterns/01-atoms/image/image";
 
 // 02 Molecules
-@import "../_patterns/02-molecules/card/card"
+@import "../_patterns/02-molecules/card/card";
+@import "../_patterns/02-molecules/menu/menu";

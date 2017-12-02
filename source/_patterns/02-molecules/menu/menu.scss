@@ -1,0 +1,55 @@
+.menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  svg {
+    cursor: pointer;
+  }
+
+  use {
+    transition: 0.1s all cubic-bezier(0.1, 0.66, 0.78, 0.49);
+    fill: white;
+    stroke: white;
+  }
+}
+
+.menu__icon-chat {
+  &:hover,
+  &.menu__icon--active {
+    use {
+      fill: $color-brand-deep-blue;
+      stroke: $color-brand-deep-blue;
+    }
+  }
+}
+
+.menu__icon-home {
+  &:hover,
+  &.menu__icon--active {
+    use {
+      fill: $color-brand-red;
+      stroke: $color-brand-red;
+    }
+  }
+}
+
+.menu__icon-foundation {
+  &:hover,
+  &.menu__icon--active {
+    use {
+      fill: $color-brand-green;
+      stroke: $color-brand-green;
+    }
+  }
+}
+
+.menu__icon-letter {
+  &:hover,
+  &.menu__icon--active {
+    use {
+      fill: $color-brand-blue;
+      stroke: $color-brand-blue;
+    }
+  }
+}
