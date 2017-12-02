@@ -1,0 +1,153 @@
+@keyframes popup-animation {
+  50% {
+    transform: rotateY(-90deg);
+  }
+
+  100% {
+    transform: rotateY(0deg);
+  }
+}
+
+.popup__wrapper,
+.popup__container {
+  z-index: 1000;
+  pointer-events: none;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.popup__wrapper {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &[hidden] {
+    .popup {
+      opacity: 0;
+      transform: rotateY(-70deg);
+    }
+  }
+}
+
+.popup__container {
+  position: fixed;
+}
+
+.popup {
+  position: static;
+  width: 90%;
+  max-width: 720px;
+  min-width: 320px;
+  pointer-events: auto;
+  z-index: 1000;
+  border-radius: 4px;
+  perspective: 1300px;
+  max-height: calc(100% - 30px);
+  transform-style: preserve-3d;
+  transition: transform 0.3s, opacity 0.3s;
+  background-color: white;
+  padding: $space-xs * 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  transform: rotateY(0deg);
+  opacity: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  section {
+    padding: 0;
+
+    &::before {
+      content: none;
+    }
+  }
+
+  form {
+    .input-validation:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .headline-v2 {
+    font-size: 18px;
+    margin-bottom: $space-sm;
+    padding-right: $space-md;
+    line-height: 27px;
+  }
+
+  .text-center {
+    .headline-v2 {
+      padding-right: 0;
+    }
+  }
+
+  h1 {
+    padding-right: 50px;
+  }
+
+  @include media-breakpoint-down(xs) {
+    min-width: 0;
+    max-width: none;
+    min-height: auto;
+    width: calc(100% - 30px);
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .list-v2 {
+    text-align: left;
+  }
+}
+
+.popup__close-icon {
+  position: absolute;
+  right: $space-xs * 3;
+  top: $space-xs * 3;
+  z-index: 100;
+  cursor: pointer;
+
+  use {
+    fill: $color-brand-red;
+    stroke: $color-brand-red;
+  }
+}
+
+.popup__html {
+  margin-bottom: $space-sm;
+  max-width: 100%;
+  text-align: left;
+
+  @include media-breakpoint-up(sm) {
+    margin-bottom: $space-md;
+  }
+
+  + div {
+    max-width: 100%;
+  }
+}
+
+.popup__footer {
+  margin-top: $space-sm;
+}
+
+.popup__backdrop {
+  background: rgba(244, 161, 35, 0.9);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  position: absolute;
+  pointer-events: auto;
+}
+
+.popup--change {
+  .popup__content {
+    transition-timing-function: linear;
+    animation: popup-animation 0.6s 0.1s forwards;
+  }
+}

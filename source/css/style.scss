@@ -17,6 +17,7 @@ $version: '1.0.0' !default;
 
 // 01 Atoms
 @import "../_patterns/01-atoms/image/image";
+@import "../_patterns/01-atoms/button/button-v2";
 
 // 02 Molecules
 @import "../_patterns/02-molecules/card/card";
@@ -24,6 +25,7 @@ $version: '1.0.0' !default;
 
 // 03 Organisms
 @import "../_patterns/03-organisms/section-home/section-home";
+@import "../_patterns/03-organisms/popup/popup";
 
 // 04 Templates
 @import "../_patterns/04-templates/view/view";

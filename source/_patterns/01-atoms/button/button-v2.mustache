@@ -1,0 +1,11 @@
+<div class="button-v2__container">
+  
+  <{{^ href }}button{{/ href }}{{# href }}a href="{{href}}"{{/ href }}
+      class="
+        button-v2
+        {{# type}} button-v2--{{type}}{{/ type}}
+        {{# inline }} button-v2--inline{{/ inline }}
+      "
+      {{# target }} target="{{ target }}"{{/ target }}{{# id }} id="{{id}}"{{/ id }}
+  >{{{ text }}}</{{^ href }}button{{/ href }}{{# href }}a{{/ href }}>
+</div>

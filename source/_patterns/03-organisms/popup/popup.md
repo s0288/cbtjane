@@ -1,0 +1,2 @@
+## Integration
+Unfortuneatly the popup component can't be included into the `layout.mustache` automatically. Whereever you want to use the popup component, you have to include it in the appropriate template file seperately.
