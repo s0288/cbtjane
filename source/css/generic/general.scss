@@ -1,6 +1,10 @@
 html,
 body {
   width: 100%;
-  overflow: hidden;
+  font-family: $font-family;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 500;
+  color: $color-text;
   height: 100%;
 }

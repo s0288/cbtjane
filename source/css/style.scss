@@ -8,12 +8,14 @@ $version: '1.0.0' !default;
 @import "generic/variables";
 @import "normalize";
 @import "generic/bootstrap";
+@import "generic/general";
 
 /* ------------------------------------ *\
     $Components
 \* ------------------------------------ */
 
-/*
- * 01 Atoms
- */
+// 01 Atoms
 @import "../_patterns/01-atoms/image/image";
+
+// 02 Molecules
+@import "../_patterns/02-molecules/card/card"

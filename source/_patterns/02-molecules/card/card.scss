@@ -1,0 +1,84 @@
+.card {
+  box-shadow: 6px 6px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  position: relative;
+}
+
+.card__header {
+  margin-top: 10px;
+  color: white;
+  padding: $space-xs $space-md;
+  background-color: grey;
+  font-weight: bold;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.card__title {
+  background-size: contain;
+  padding-left: 33px;
+  background-repeat: no-repeat;
+}
+
+.card__description {
+  padding: $space-md;
+  font-size: 36px;
+  line-height: 44px;
+}
+
+.card__number {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  font-size: 144px;
+  line-height: 1em;
+  color: grey;
+  opacity: 0.1;
+
+  &::before {
+    content: "#";
+  }
+}
+
+.card--type-letter {
+  .card__header {
+    background: $color-brand-blue;
+  }
+
+  .card__number {
+    color: $color-brand-blue;
+  }
+
+  .card__title {
+    background-image: url("/images/icons/letter.svg");
+  }
+}
+
+.card--type-traps {
+  .card__header {
+    background: $color-brand-red;
+  }
+
+  .card__number {
+    color: $color-brand-red;
+  }
+
+  .card__title {
+    background-image: url("/images/icons/traps.svg");
+  }
+}
+
+.card--type-foundation {
+  .card__header {
+    background: $color-brand-green;
+  }
+
+  .card__number {
+    color: $color-brand-green;
+  }
+
+  .card__title {
+    background-image: url("/images/icons/foundation.svg");
+  }
+}
