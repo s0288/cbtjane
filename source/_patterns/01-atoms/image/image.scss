@@ -1,0 +1,14 @@
+.image {
+  margin-bottom: $space-xs * 3;
+  display: inline-block;
+  max-width: 100%;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.image--center {
+  display: block;
+  text-align: center;
+}

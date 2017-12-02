@@ -1,0 +1,98 @@
+{
+  "__": true,
+  "sectionZero": true,
+  "sectionOne": true,
+  "sectionTwo": true,
+  "sectionThree": true,
+  "sectionFour": true,
+  "sectionFive": true,
+  "pageHeader": {
+    "title": "Nullizzle shizznit velizzle, hizzle, suscipit own yo', gravida vizzle, arcu.",
+    "subtitle": "Fizzle crazy tortor. Sed rizzle. Ass pimpin' dolor dapibizzle turpis tempizzle fo shi"
+  },
+  "header": {
+    "title": "Nullizzle shizznit velizzle, hizzle, suscipit own yo', gravida vizzle, arcu.",
+    "description": "Fizzle crazy tortor. Sed rizzle. Ass pimpin' dolor dapibizzle turpis tempizzle fo shi"
+  },
+  "images": [
+    {
+      "src": "http://placehold.it/300x400?text=GetSafe+Placeholder+Image!",
+      "alt": "GetSafe Bild",
+      "size": "big"
+    },
+    {
+      "src": "http://placehold.it/300x400?text=GetSafe+Placeholder+Image!",
+      "alt": "GetSafe Bild",
+      "size": "big"
+    }
+  ],
+  "url": "http://lorizzle.nl/",
+  "quotation": {
+    "quote": "Fizzle crazy tortor. Sed rizzle. Ass pimpin' dolor dapibizzle turpis tempizzle fo shizzle my nizzle. Maurizzle pellentesque",
+    "author": "John Doe"
+  },
+  "author": "John Doe",
+  "placeholder": "Wähle deine Versicherung",
+  "link_text": "Button Text",
+  "accordionElements": [
+    {
+      "index": 1,
+      "label": "Das GetSafe-Gesundheitspaket - was genau kann ich darunter verstehen?",
+      "teaser": "1) Das Paket beinhaltet eine gesetzliche Krankenversicherung bei unserem Partner der Hanseatischen Krankenkasse (HEK), die bei Vergleichs- und Qualitätstest stets hervorragend abschneidet.",
+      "descriptions": [
+        {
+          "description": "2017 war sie z.B. wieder klarer Testsieger im Vergleich der besten Deutschen Krankenkassen des unabhängigen Verbraucherportals Finanztip. Die HEK bietet ihren Versicherten jährlich 160 Euro Bonus als Rückzahlung auf abgeschlossene Zusatzversicherungen an. Diese wird durch das Durchführen eines Basis-Gesundheitschecks (im Normalfall ein Zahnarztbesuch, sowie eine Hausarzt- oder Krebsvorsorgeuntersuchung pro Kalenderjahr) erlangt."
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "label": "Das GetSafe-Gesundheitspaket - was genau kann ich darunter verstehen?",
+      "teaser": "1) Das Paket beinhaltet eine gesetzliche Krankenversicherung bei unserem Partner der Hanseatischen Krankenkasse (HEK), die bei Vergleichs- und Qualitätstest stets hervorragend abschneidet.",
+      "descriptions": [
+        {
+          "description": "Das GetSafe-Gesundheitspaket ist eine bessere, umfassendere Versicherungslösung für deine Gesundheit. Es besteht im Wesentlichen aus zwei miteinander verbundenen Komponenten:"
+        }
+      ]
+    }
+  ],
+  "accordionSections": [
+    {
+      "index": "sizzle-nizzle",
+      "title": "1.) Sizzle Nizzle",
+      "accordionElements": [
+        {
+          "index": 1,
+          "label": "1) Ass pimpin' dolor dapibizzle turpis tempizzle fo shizzle my nizzle.",
+          "teaser": "Fizzle crazy tortor. Sed rizzle. Ass pimpin' dolor dapibizzle turpis tempizzle fo shizzle my nizzle. Maurizzle pellentesque",
+          "descriptions": [
+            {
+              "description": "Fizzle crazy tortor. Sed rizzle. Ass pimpin' dolor dapibizzle turpis tempizzle fo shizzle my nizzle. Maurizzle pellentesque"
+            },
+            {
+              "description": "Fizzle crazy tortor. Sed rizzle. Ass pimpin' dolor dapibizzle turpis tempizzle fo shizzle my nizzle. Maurizzle pellentesque"
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "label": "2) Fizzle crazy tortor. Sed rizzle. Ass pimpin' dolor dapibizzle turpis tempizzle fo shizzle my nizzle.",
+          "teaser": "Ass pimpin' dolor dapibizzle turpis tempizzle fo shizzle my nizzle.",
+          "descriptions": [
+            {
+              "description": "Ass pimpin' dolor dapibizzle turpis tempizzle fo shizzle my nizzle."
+            },
+            {
+              "description": "Ass pimpin' dolor dapibizzle turpis tempizzle fo shizzle my nizzle."
+            }
+          ]
+        },
+        {
+          "index": 3,
+          "label": "3) Fizzle crazy tortor. Sed rizzle. Ass pimpin' dolor dapibizzle turpis tempizzle fo shizzle my nizzle.",
+          "teaser": "Ass pimpin' dolor dapibizzle turpis tempizzle fo shizzle my nizzle."
+        }
+      ]
+    }
+  ]
+}

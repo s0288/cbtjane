@@ -1,0 +1,13 @@
+<div 
+    class="image {{# class }} {{class}}{{/ class }}" 
+    style="{{# height }}height:{{ height }}px;{{/ height }}{{# width }} width:{{ width }}px;{{/ width}}"
+>
+    <img 
+        class="lazyload"
+        {{# height}} height="{{height}}"{{/ height}}
+        {{# width}} width="{{width}}"{{/ width}}
+        {{^ retina }} data-src="{{src}}.{{extension}}"{{/ retina }}
+        {{# retina }} data-srcset="{{src}}.{{extension}} 1x, {{src}}@2x.{{extension}} 2x"{{/ retina }} 
+        alt="{{alt}}" 
+    />
+</div>

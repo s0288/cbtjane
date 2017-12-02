@@ -1,0 +1,41 @@
+{
+  "env": {
+    "browser": true,
+    "mocha": true
+  },
+  "extends": "airbnb",
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "sourceType": "module",
+    "allowImportExportEverywhere": true
+  },
+  "plugins": [
+    "dollar-sign"
+  ],
+  "globals": {
+    "window": true,
+    "document": true,
+    "browser": true,
+    "expect": true,
+    "sinon": true,
+    "$": true,
+    "$$": true,
+    "landingpay": true
+  },
+  "rules": {
+    "no-underscore-dangle": 0,
+    "comma-dangle": [
+      "error",
+      "never"
+    ],
+    "no-console": 0,
+    "semi": [
+      "error",
+      "never"
+    ],
+    "dollar-sign/dollar-sign": [
+      2,
+      "ignoreProperties"
+    ]
+  }
+}

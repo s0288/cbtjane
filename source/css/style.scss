@@ -1,0 +1,32 @@
+/* ------------------------------------ *\
+    $Variables
+\* ------------------------------------ */
+
+// Version will be overwritten by gulp task
+$version: '1.0.0' !default;
+
+@import "generic/variables";
+@import "normalize";
+@import "generic/bootstrap";
+
+/* ------------------------------------ *\
+    $Components
+\* ------------------------------------ */
+
+/*
+ * 02 Molecules
+ */
+
+/*
+ * 01 Atoms
+ */
+@import "../_patterns/01-atoms/image/image";
+
+/*
+ * 02 Molecules
+ */
+
+
+/*
+ * 03 Organims
+ */

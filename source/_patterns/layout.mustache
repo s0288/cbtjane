@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <title>{{ title }}</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="stylesheet" href="/css/style.css?v={{ version }}" media="all" />
+    <script src="/js/manifest.js?v={{ version }}"></script>
+    <script src="/js/main.head.js?v={{ version }}" async></script>
+  </head>
+  
+  <body class="{{bodyClass}}">
+    {{> body }}
+    <script src="/js/main.js?v={{ version }}"></script>
+  </body>
+</html>
