@@ -17,7 +17,25 @@
   }
 
   .section-home {
-    height: calc(100% - 64px);
+    transform: translateX(calc(-100% - 32px));
+  }
+
+  .section-foundation,
+  .section-letter {
+    transform: translateX(calc(100% + 32px));
+  }
+
+  .section-home,
+  .section-foundation,
+  .section-letter {
+    position: absolute;
+    width: calc(100% - 64px);
+    height: calc(100% - 128px);
+    transition: 0.5s all cubic-bezier(0.54, 0, 0.68, 1);
+  }
+
+  .view--active {
+    transform: translateX(0%);
   }
 
   .menu {

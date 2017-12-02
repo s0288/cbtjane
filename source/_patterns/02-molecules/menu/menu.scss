@@ -28,8 +28,8 @@
   &:hover,
   &.menu__icon--active {
     use {
-      fill: $color-brand-red;
-      stroke: $color-brand-red;
+      fill: $color-brand-blue;
+      stroke: $color-brand-blue;
     }
   }
 }
@@ -48,8 +48,8 @@
   &:hover,
   &.menu__icon--active {
     use {
-      fill: $color-brand-blue;
-      stroke: $color-brand-blue;
+      fill: $color-brand-red;
+      stroke: $color-brand-red;
     }
   }
 }
