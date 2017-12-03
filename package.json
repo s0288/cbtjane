@@ -95,6 +95,7 @@
   "keywords": [],
   "author": "",
   "scripts": {
+    "heroku-postbuild": "npm run gulp build-prod",
     "gulp": "gulp -- ",
     "lint": "npm run gulp eslint && npm run gulp lint-css",
     "server": "nodemon ./server.js",
