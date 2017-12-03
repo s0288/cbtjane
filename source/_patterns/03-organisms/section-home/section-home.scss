@@ -1,5 +1,6 @@
 .section-home {
   position: relative;
+  overflow-x: hidden;
 
   .card {
     position: relative;
@@ -19,4 +20,20 @@
   position: absolute;
   bottom: 0;
   width: 100%;
+}
+
+.section-home__name {
+  color: white;
+  bottom: 0;
+  position: absolute;
+  left: 0;
+  font-size: 100px;
+  line-height: 1em;
+  opacity: 0.1;
+  font-weight: bold;
+  -webkit-mask-image: -webkit-gradient(linear, left 0, right bottom, from(black), to(transparent));
+
+  &::before {
+    content: "Hallo ";
+  }
 }

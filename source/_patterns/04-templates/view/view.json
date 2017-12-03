@@ -1,8 +1,5 @@
 {
     "homecards": [],
     "lettercards": [],
-    "profile": {
-        "name": "Alex",
-        "image": "/images/avatar.png"
-    }
+    "profile": {}
 }

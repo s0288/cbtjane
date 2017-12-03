@@ -8,6 +8,7 @@ const CardsTemplate = require('../../02-molecules/card/card.mustache')
 
 User.then((user) => {
   $('.section-home__avatar img').attr('src', user.getProfilePic())
+  $('.section-home__name').html(user.getFirstName())
 })
 
 Template.then((template) => {
