@@ -5,6 +5,12 @@
   background-color: rgba(255, 255, 255, 0.95);
   padding-top: $space-xs;
   margin-bottom: 1.5 * $space-sm;
+  opacity: 0;
+  transition: 1s all cubic-bezier(0.18, 0.63, 0.18, 1);
+}
+
+.card--active {
+  opacity: 1;
 }
 
 .card__header {

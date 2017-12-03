@@ -10,7 +10,6 @@ const PersonalCardsTemplate = require('../../02-molecules/personal-card/personal
 $('.section-foundation__path').click(() => {
   Promise.all([Template, Foundation]).then(([template, foundations]) => {
     const templates = template.getAll()
-    console.log(foundations)
     const foundation1 = templates.find(({ id }) => id === '2')
     let cards = ''
     foundations.getAll().forEach((foundation, i) => {

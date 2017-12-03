@@ -23,17 +23,25 @@
 }
 
 .section-home__name {
+  width: 100%;
   color: white;
   bottom: 0;
   position: absolute;
   left: 0;
   font-size: 100px;
   line-height: 1em;
-  opacity: 0.1;
   font-weight: bold;
   -webkit-mask-image: -webkit-gradient(linear, left 0, right bottom, from(black), to(transparent));
+  transform: translateY(100%);
+  opacity: 0;
+  transition: 0.5s all cubic-bezier(0.18, 0.63, 0.18, 1);
 
   &::before {
     content: "Hallo ";
   }
+}
+
+.section-home__name--active {
+  opacity: 0.1;
+  transform: translateY(0);
 }

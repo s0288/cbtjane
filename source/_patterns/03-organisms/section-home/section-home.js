@@ -9,6 +9,9 @@ const CardsTemplate = require('../../02-molecules/card/card.mustache')
 User.then((user) => {
   $('.section-home__avatar img').attr('src', user.getProfilePic())
   $('.section-home__name').html(user.getFirstName())
+  setTimeout(() => {
+    $('.section-home__name').addClass('section-home__name--active')
+  }, 1500)
 })
 
 Template.then((template) => {
@@ -24,18 +27,24 @@ Template.then((template) => {
     html += CardsTemplate.render(json)
   })
   $('.section-home__cards').html(html)
-  $('.section-home__cards .card').click((e) => {
-    const $element = $(e.currentTarget)
-    const title = $element.find('.card__description').html()
-    const description = $element.data('popup-description')
-    Popup.setHtml({
-      html: `<h2 class="headline-v2">${title}</h2><p>${description}</p>`,
-      confirmationBtn: {
-        cb() {
-          Popup.close()
+  $('.section-home__cards .card')
+    .click((e) => {
+      const $element = $(e.currentTarget)
+      const title = $element.find('.card__description').html()
+      const description = $element.data('popup-description')
+      Popup.setHtml({
+        html: `<h2 class="headline-v2">${title}</h2><p>${description}</p>`,
+        confirmationBtn: {
+          cb() {
+            Popup.close()
+          }
         }
-      }
+      })
+      Popup.confirmationButton.reference.hide()
     })
-    Popup.confirmationButton.reference.hide()
-  })
+    .each(function showCards(index) {
+      setTimeout(() => {
+        $(this).addClass('card--active')
+      }, 500 * index)
+    })
 })

@@ -23,17 +23,23 @@ Template.then((template) => {
     html += CardsTemplate.render(json)
   })
   $('.section-letter__cards').html(html)
-  $('.section-letter__cards .card').click((e) => {
-    const $element = $(e.currentTarget)
-    const title = $element.find('.card__description').html()
-    const description = $element.data('popup-description')
-    Popup.setHtml({
-      html: `<h2>${title}</h2><p>${description}</p>`,
-      confirmationBtn: {
-        cb() {
-          Popup.close()
+  $('.section-letter__cards .card')
+    .click((e) => {
+      const $element = $(e.currentTarget)
+      const title = $element.find('.card__description').html()
+      const description = $element.data('popup-description')
+      Popup.setHtml({
+        html: `<h2>${title}</h2><p>${description}</p>`,
+        confirmationBtn: {
+          cb() {
+            Popup.close()
+          }
         }
-      }
+      })
     })
-  })
+    .each(function showCards(index) {
+      setTimeout(() => {
+        $(this).addClass('card--active')
+      }, 500 * index)
+    })
 })
