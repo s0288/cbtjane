@@ -24,13 +24,12 @@ const getCurrentSpreadSheet = sheet => new Promise((resolve, reject) => {
 })
 
 module.exports = (app) => {
-  app.use('/huhu', (req, res) => {
-    res.status(200)
+  app.get('/', (req, res) => {
+    res.render('04-templates/view/view')
   })
 
   app.get('/backend/templates', (req, res) => {
     getCurrentSpreadSheet(1).then((sheet) => {
-      console.log(sheet)
       res.json(sheet)
     })
   })
