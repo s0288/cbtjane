@@ -1,28 +1,32 @@
 import $ from 'jquery'
 
-const $icons = $('.menu svg').not(':first-child')
+import getUrlParameter from '../../../js/services/getUrlParameter'
+
+const $icons = $('.menu svg')
 const $views = $('.view > div')
+
+const viewParam = getUrlParameter('view')
+
+const hideEverything = () => {
+  $icons.removeClass('menu__icon--active')
+  $views.removeClass('view--active')
+}
+
+const showElemWithIndex = (index, $element) => {
+  $views.eq(index).addClass('view--active')
+  $element.addClass('menu__icon--active')
+}
 
 $icons.click((e) => {
   const $element = $(e.currentTarget)
-  $icons.removeClass('menu__icon--active')
-  $views.removeClass('view--active')
-  $element.addClass('menu__icon--active')
-
-  switch ($icons.index($element)) {
-    case 0:
-      $views.eq(0).addClass('view--active')
-      break
-    case 1:
-      $views.eq(1).addClass('view--active')
-      break
-    case 2:
-      $views.eq(2).addClass('view--active')
-      break
-    default:
-      break
-  }
+  hideEverything()
+  showElemWithIndex($icons.index($element), $element)
 })
 
-$icons.eq(0).addClass('menu__icon--active')
-$views.eq(0).addClass('view--active')
+if (viewParam) {
+  const index = parseInt(viewParam, 10)
+  showElemWithIndex(index, $icons.eq(index))
+} else {
+  showElemWithIndex(0, $icons.eq(0))
+}
+

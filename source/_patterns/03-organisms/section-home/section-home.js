@@ -12,7 +12,7 @@ User.then((user) => {
 
 Template.then((template) => {
   let html = ''
-  const mappedJSON = template.getAllAvailableLetters().map(templ => ({
+  const mappedJSON = template.getAllAvailableTemplates().map(templ => ({
     title: `#${templ.number} ${templ.type}`,
     description: templ.carddescription,
     popup: templ.description,
@@ -22,18 +22,19 @@ Template.then((template) => {
   mappedJSON.forEach((json) => {
     html += CardsTemplate.render(json)
   })
-  $('.section-letter__cards').html(html)
-  $('.section-letter__cards .card').click((e) => {
+  $('.section-home__cards').html(html)
+  $('.section-home__cards .card').click((e) => {
     const $element = $(e.currentTarget)
     const title = $element.find('.card__description').html()
     const description = $element.data('popup-description')
     Popup.setHtml({
-      html: `<h2>${title}</h2><p>${description}</p>`,
+      html: `<h2 class="headline-v2">${title}</h2><p>${description}</p>`,
       confirmationBtn: {
         cb() {
           Popup.close()
         }
       }
     })
+    Popup.confirmationButton.reference.hide()
   })
 })

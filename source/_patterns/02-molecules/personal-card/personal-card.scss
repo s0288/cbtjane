@@ -1,0 +1,31 @@
+.personal-card {
+  box-shadow: 3px 3px 2px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  position: relative;
+  background-color: rgba($color-brand-red, 0.95);
+  padding-top: $space-xs;
+  margin-bottom: 1.5 * $space-sm;
+  color: white;
+  font-family: $font-family-script;
+  font-style: italic;
+}
+
+.personal-card__description {
+  padding: $space-sm $space-sm $space-md $space-sm;
+  font-size: 18px;
+  line-height: 26px;
+}
+
+.personal-card__number {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  font-size: 72px;
+  line-height: 1em;
+  color: white;
+  opacity: 0.1;
+
+  &::before {
+    content: "#";
+  }
+}

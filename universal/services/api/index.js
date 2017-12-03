@@ -1,10 +1,3 @@
-
-let langService
-
-if (process.env.CLIENT === 'true') {
-  langService = require('../../../source/js/services/language')
-}
-
 /**
  * @typedef ApiOptions
  * @property {string} method HTTP Method. Can be PUT, DELETE, POST, GET
@@ -12,9 +5,7 @@ if (process.env.CLIENT === 'true') {
  * @property {string} url Path
  * @property {Object} [payload] Payload object. Send as body in POST and as query in GET requests
  * @property {Object} [headers] HTTP Headers
- * @property {string} [token] User authentication token
  * @property {number} [ttl] Time in milliseconds to cache a request
- * @property {string} [lang] Preferred language
  */
 
 /**
@@ -23,19 +14,14 @@ if (process.env.CLIENT === 'true') {
  */
 const Api = (options) => {
   const {
-    method, baseURL, url, payload = {}, headers = {}, ttl = 0, lang = 'en'
+    method, baseURL, url, payload = {}, headers = {}, ttl = 0
   } = options
-  let { token } = options
   if (process.env.CLIENT !== 'true') {
     if (!ttl) {
       /* eslint global-require: 0 */
       return require('request-promise-native')({
         body: method === 'GET' ? undefined : payload,
-        headers: {
-          'x-gtsf-content-language': lang,
-          ...(token ? { Authorization: `Token token="${token}"` } : {}),
-          ...headers
-        },
+        headers,
         json: true,
         method,
         qs: method === 'GET' ? payload : undefined,
@@ -45,13 +31,9 @@ const Api = (options) => {
     /* eslint global-require: 0 */
     return require('request-promise-cache')({
       body: method === 'GET' ? undefined : payload,
-      cacheKey: `${baseURL + url}.${lang}`,
+      cacheKey: `${baseURL + url}`,
       cacheTTL: ttl,
-      headers: {
-        'x-gtsf-content-language': lang,
-        ...(token ? { Authorization: `Token token="${token}"` } : {}),
-        ...headers
-      },
+      headers,
       json: true,
       method,
       qs: method === 'GET' ? payload : undefined,
@@ -66,21 +48,11 @@ const Api = (options) => {
       })
   }
   if (process.env.CLIENT === 'true') {
-    const cookie = /token=s%3A([^.]+)/.exec(document.cookie)
-
-    if (cookie) {
-      token = cookie[1]
-    }
-
     /* eslint global-require: 0 */
     return require('axios')({
       baseURL,
       data: method === 'GET' ? undefined : payload,
-      headers: {
-        ...(token ? { Authorization: `Token token="${token}"` } : {}),
-        'x-gtsf-content-language': langService.getCurrentLanguage(),
-        ...headers
-      },
+      headers,
       method,
       params: method === 'GET' ? payload : undefined,
       url
