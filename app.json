@@ -1,0 +1,56 @@
+{
+  "name": "CBT Jane",
+  "description": "CBT Jane",
+  "repository": "https://github.com/s0288/cbtjane.git",
+  "logo": "",
+  "success_url": "/",
+  "environments": {
+    "test": {
+      "buildpacks": [
+        {
+          "url": "https://github.com/heroku/heroku-buildpack-jvm-common.git"
+        },
+        {
+          "url": "heroku/nodejs"
+        }
+      ],
+      "formation": {
+        "test": {
+          "quantity": 1,
+          "size": "standard-1x"
+        }
+      }
+    }
+  },
+  "env": {
+    "NPM_CONFIG_PRODUCTION": {
+      "required": true
+    },
+    "NODE_ENV": {
+      "required": true
+    },
+    "LD_LIBRARY_PATH": {
+      "required": true
+    }
+  },
+  "formation": {
+    "web": {
+      "quantity": 1,
+      "size": "hobby"
+    }
+  },
+  "buildpacks": [
+    {
+      "url": "https://github.com/mcollina/heroku-buildpack-graphicsmagick.git"
+    },
+    {
+      "url": "https://github.com/fxtentacle/heroku-pdftk-buildpack.git"
+    },
+    {
+      "url": "https://github.com/heroku/heroku-buildpack-jvm-common.git"
+    },
+    {
+      "url": "heroku/nodejs"
+    }
+  ]
+}
